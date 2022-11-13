@@ -12,6 +12,7 @@
       rel="stylesheet"
     />
     <title>Badgers Big Screen</title>
+    <script src="store.js" async></script>
     <script
       src="https://kit.fontawesome.com/32b6948ce4.js"
       crossorigin="anonymous"
@@ -50,6 +51,9 @@
               <button class="preOrdButton" id="myBtn">
                 <a href="#">Previous Orders</a>
               </button>
+
+    
+
               <button class="signOutButton" id="myBtn">
                 <a href="#">sign Out</a>
               </button>
@@ -112,7 +116,7 @@
           />
           <span class="dvdListItemTitle">Harry Potter</span>
           <p class="dvdListItemVerb">The final part of the Wizard Series.</p>
-          <span class="dvdPrice">Price:()</span>
+          <span class="dvdPrice">Price:£9.99</span>
           <span class="dvdStock">Stock:()</span>
           <span class="dvdGenre">Genre:()</span>
           <button class="dvdBuy">Add to Basket</button>
@@ -124,7 +128,7 @@
           <p class="dvdListItemVerb">
             Epic award winning space and travel story.
           </p>
-          <span class="dvdPrice">Price:()</span>
+          <span class="dvdPrice">Price:£13.99</span>
           <span class="dvdStock">Stock:()</span>
           <span class="dvdGenre">Genre:()</span>
           <button class="dvdBuy">Add to Basket</button>
@@ -133,7 +137,7 @@
           <img class="dvdListItemImg" src="imgs/skyfall-main_1.webp" alt="" />
           <span class="dvdListItemTitle">Skyfall</span>
           <p class="dvdListItemVerb">Epic James Bond film.</p>
-          <span class="dvdPrice">Price:()</span>
+          <span class="dvdPrice">Price:£8.99</span>
           <span class="dvdStock">Stock:()</span>
           <span class="dvdGenre">Genre:()</span>
           <button class="dvdBuy">Add to Basket</button>
@@ -146,7 +150,7 @@
           />
           <span class="dvdListItemTitle">Hocus Pocus</span>
           <p class="dvdListItemVerb">Class Disney Witch advanture</p>
-          <span class="dvdPrice">Price:()</span>
+          <span class="dvdPrice">Price:£19.99</span>
           <span class="dvdStock">Stock:()</span>
           <span class="dvdGenre">Genre:()</span>
           <button class="dvdBuy">Add to Basket</button>
@@ -155,7 +159,7 @@
           <img class="dvdListItemImg" src="imgs/goonoes.jpg" alt="" />
           <span class="dvdListItemTitle">Goonies</span>
           <p class="dvdListItemVerb">Classive Kids Adventure film</p>
-          <span class="dvdPrice">Price:()</span>
+          <span class="dvdPrice">Price:£12.99</span>
           <span class="dvdStock">Stock:()</span>
           <span class="dvdGenre">Genre:()</span>
           <button class="dvdBuy">Add to Basket</button>
@@ -164,7 +168,7 @@
           <img class="dvdListItemImg" src="imgs/SupermanI.webp" alt="" />
           <span class="dvdListItemTitle">Superman</span>
           <p class="dvdListItemVerb">The Original & Best</p>
-          <span class="dvdPrice">Price:()</span>
+          <span class="dvdPrice">Price:£14.99</span>
           <span class="dvdStock">Stock:()</span>
           <span class="dvdGenre">Genre:()</span>
           <button class="dvdBuy">Add to Basket</button>
@@ -182,7 +186,7 @@
           />
           <span class="dvdListItemTitle">Beauty and The Beast</span>
           <p class="dvdListItemVerb">A tale as old as time...</p>
-          <span class="dvdPrice">Price:()</span>
+          <span class="dvdPrice">Price:£24.99</span>
           <span class="dvdStock">Stock:()</span>
           <span class="dvdGenre">Genre:()</span>
           <button class="dvdBuy">Add to Basket</button>
@@ -195,7 +199,7 @@
           />
           <span class="dvdListItemTitle">No Time to Die</span>
           <p class="dvdListItemVerb">Another epic James Bond Adventure.</p>
-          <span class="dvdPrice">Price:()</span>
+          <span class="dvdPrice">Price:£11.99</span>
           <span class="dvdStock">Stock:()</span>
           <span class="dvdGenre">Genre:()</span>
           <button class="dvdBuy">Add to Basket</button>
@@ -208,7 +212,7 @@
           />
           <span class="dvdListItemTitle">We can be heros</span>
           <p class="dvdListItemVerb">Fun kids superhero film.</p>
-          <span class="dvdPrice">Price:()</span>
+          <span class="dvdPrice">Price:£15.99</span>
           <span class="dvdStock">Stock:()</span>
           <span class="dvdGenre">Genre:()</span>
           <button class="dvdBuy">Add to Basket</button>
@@ -221,7 +225,7 @@
           />
           <span class="dvdListItemTitle">Batman</span>
           <p class="dvdListItemVerb">Batman... That is all</p>
-          <span class="dvdPrice">Price:()</span>
+          <span class="dvdPrice">Price:£16.99</span>
           <span class="dvdStock">Stock:()</span>
           <span class="dvdGenre">Genre:()</span>
           <button class="dvdBuy">Add to Basket</button>
@@ -230,7 +234,7 @@
           <img class="dvdListItemImg" src="imgs/joker.jpg" alt="" />
           <span class="dvdListItemTitle">The Joker</span>
           <p class="dvdListItemVerb">Dark origins of the clown prince</p>
-          <span class="dvdPrice">Price:()</span>
+          <span class="dvdPrice">Price:£14.99</span>
           <span class="dvdStock">Stock:()</span>
           <span class="dvdGenre">Genre:()</span>
           <button class="dvdBuy">Add to Basket</button>
@@ -239,10 +243,11 @@
           <img class="dvdListItemImg" src="imgs/3679.webp" alt="" />
           <span class="dvdListItemTitle">Back to the Outback</span>
           <p class="dvdListItemVerb">Fun family animal adventure</p>
-          <span class="dvdPrice">Price:()</span>
+          <span class="dvdPrice">Price:£19.99</span>
           <span class="dvdStock">Stock:()</span>
           <span class="dvdGenre">Genre:()</span>
           <button class="dvdBuy">Add to Basket</button>
+        
         </div>
       </div>
     </div>
@@ -254,6 +259,24 @@
                 <button class="featured-button">WATCH</button>
             </div>
 
+            <!-- Shopping Basket Section -->
+            <section class="container content-section">
+              <h2 class="section-header">Basket</h2>
+              <div class="cart-row">
+                  <span class="cart-item cart-header cart-column">ITEM</span>
+                  <span class="cart-price cart-header cart-column">PRICE</span>
+                  <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+              </div>
+              <div class="cart-items">
+                  
+                  </div>
+              </div>
+              <div class="cart-total">
+                  <strong class="cart-total-title">Total</strong>
+                  <span class="cart-total-price">£0</span>
+              </div>
+              <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+          </section>
     <script>
       // Get the modal
       var modal = document.getElementById("myModal");
@@ -288,6 +311,8 @@
       function closeSearch() {
         document.getElementById("myOverlay").style.display = "none";
       }
+
+
     </script>
   </body>
 </html>
