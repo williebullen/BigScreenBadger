@@ -23,6 +23,8 @@ function ready() {
     document.getElementsByClassName('btn-purchase')[0].addEventListener('click', purchaseClicked)
 }
 
+
+
 function purchaseClicked() {
     alert('Thank you for your purchase')
     var cartItems = document.getElementsByClassName('cart-items')[0]
@@ -98,3 +100,97 @@ function updateCartTotal() {
     total = Math.round(total * 100) / 100
     document.getElementsByClassName('cart-total-price')[0].innerText = '£' + total
 }
+
+
+
+// ROB's ADDITIONS FOR STOCK //
+
+
+
+
+function reduceStockHarry() {
+    let stockNumberHarry = document.querySelector('.stock-harry');
+    if (stockNumberHarry.innerHTML > 0){
+        stockNumberHarry.innerHTML--;
+     } 
+    }
+
+function reduceStockInter() {
+    let stockNumberInter = document.querySelector('.stock-inter');
+    if (stockNumberInter.innerHTML > 0){
+        stockNumberInter.innerHTML--;
+     } 
+    }
+    
+function reduceStockSkyfall() {
+    let stockNumberSkyfall = document.querySelector('.stock-skyfall');
+    if (stockNumberSkyfall.innerHTML > 0){
+        stockNumberSkyfall.innerHTML--;
+     } 
+    }
+
+function reduceStockHocus() {
+    let stockNumberHocus = document.querySelector('.stock-hocus');
+    if (stockNumberHocus.innerHTML > 0){
+        stockNumberHocus.innerHTML--;
+     } 
+    }
+
+function reduceStockGoon() {
+    let stockNumberGoon = document.querySelector('.stock-goon');
+    if (stockNumberGoon.innerHTML > 0){
+        stockNumberGoon.innerHTML--;
+        } 
+    }
+
+function reduceStockSupe() {
+    let stockNumberSupe = document.querySelector('.stock-supe');
+    if (stockNumberSupe.innerHTML > 0){
+        stockNumberSupe.innerHTML--;
+        } 
+    }
+
+function reduceStockBeaut() {
+    let stockNumberBeaut = document.querySelector('.stock-beaut');
+    if (stockNumberBeaut.innerHTML > 0){
+        stockNumberBeaut.innerHTML--;
+        } 
+    }
+
+function reduceStockBond() {
+    let stockNumberBond = document.querySelector('.stock-bond');
+    if (stockNumberBond.innerHTML > 0){
+        stockNumberBond.innerHTML--;
+        } 
+    }
+
+function reduceStockHero() {
+    let stockNumberhero = document.querySelector('.stock-hero');
+    if (stockNumberhero.innerHTML > 0){
+        stockNumberhero.innerHTML--;
+        } 
+    }
+
+function reduceStockBatman() {
+    let stockNumberbatman = document.querySelector('.stock-batman');
+    if (stockNumberbatman.innerHTML > 0){
+        stockNumberbatman.innerHTML--;
+        } 
+    }
+
+function reduceStockJoke() {
+    let stockNumberjoke = document.querySelector('.stock-joke');
+    if (stockNumberjoke.innerHTML > 0){
+        stockNumberjoke.innerHTML--;
+        } 
+    }
+
+function reduceStockOutback() {
+    let stockNumberoutback = document.querySelector('.stock-outback');
+    if (stockNumberoutback.innerHTML > 0){
+        stockNumberoutback.innerHTML--;
+        } 
+    }
+
+
+    
