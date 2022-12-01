@@ -4,18 +4,19 @@
 
 body {
     font-family: 'Heebo', sans-serif;
-    background-color: rgb(20, 20, 20);
+    background-color: rgb(10, 10, 10);
 }
 
 a {
   text-decoration: none;
   color: white;
+  margin-top: 15px;
 }
 
 .logoImg {
-  height: 150px;
+  height: 60px;
   margin-left: 25px;
-  margin-top: 60px;
+  margin-top: 5px;
 }
 
 .sidebar {
@@ -42,9 +43,10 @@ a {
     background-color: black;
     position: sticky;
     top: 0;
+    z-index: 1;
   }
 
-  .container {
+  .navContainer {
     display: flex;
     align-items: center;
     padding: 0 50px;
@@ -111,6 +113,19 @@ a {
   object-fit: cover;
   }
 
+  .genSection {
+    display: flex;
+    margin-left: 50px;
+  }
+
+  .genBTN {
+    background-color: #0063bf;
+    border: none;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
 
 
   .heroContent {
@@ -122,13 +137,62 @@ a {
   .heroWording {
     width: 450px;
     color: rgb(255, 255, 255);
-    margin: 165px 0;
+    margin: 75px 0;
     margin-left: 50px;
     font-weight: 700;
     font-size: 25px;
     background-color: rgb(0, 0, 0, 0.5);
     padding: 25px;
     border-radius: 10px;
+    /* position: absolute; */
+  }
+
+.basketModal {
+  background-color: rgba(0,0,0,0.8);
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+}
+
+.--basketHidden {
+  display: none;
+}
+
+.basketCloseBar {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: -1rem;
+  margin-top: -1rem;
+  cursor: pointer;
+  color: #aaaaaa;
+  font-weight: 700;
+}
+
+.basketContents {
+  background-color: rgb(20, 20, 20);
+  padding: 2rem 4rem;
+  color: #aaaaaa;
+  border: 1px solid #888;
+}
+
+
+
+  .trailer {
+    width: 200px;
+    color: rgb(255, 255, 255);
+    margin-left: 70px;
+    font-weight: 700;
+    font-size: 15px;
+    background-color: #0063bf;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
     /* position: absolute; */
   }
 
@@ -148,6 +212,7 @@ a {
   .dvdListItem {
     margin-right: 30px;
     position: relative;
+    z-index: 5;
   }
 
   .dvdListItem:hover .dvdListItemImg {
@@ -206,7 +271,7 @@ a {
     position: absolute;
     top: 60%;
     left: 50px;
-    width: 60px;
+    width: 90px;
     opacity: 0;
     transition: 1s all ease-in-out;
     border-radius: 5px;
@@ -220,7 +285,7 @@ a {
     position: absolute;
     top: 50%;
     left: 50px;
-    width: 60px;
+    width: 90px;
     opacity: 0;
     transition: 1s all ease-in-out;
     border-radius: 5px;
@@ -233,7 +298,7 @@ a {
     position: absolute;
     top: 70%;
     left: 50px;
-    width: 60px;
+    width: 90px;
     opacity: 0;
     transition: 1s all ease-in-out;
     border-radius: 5px;
@@ -254,6 +319,17 @@ a {
     transition: 1.2s all ease-in-out;
   }
 
+  .arrow {
+    font-size: 120px;
+    position: absolute;
+    top: auto;
+    right: 0;
+    color: lightgray;
+    opacity: 0.5;
+    cursor: pointer;
+    z-index: 1;
+  }
+
   /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
@@ -267,6 +343,7 @@ a {
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  z-index: 3;
 }
 
 /* Modal Content */
@@ -368,19 +445,19 @@ a {
 
 /* Shopping Basket Style  */
 
-.content-section {
+/* .content-section {
   margin: 1em;
   box-sizing: border-box;
   display:inline-block;
   position:relative; left:100px; top:30px;
 
-}
+} */
 
-.container {
+/* .container {
   max-width: 900px;
   margin: auto;
   padding: 1.5em;
-}
+} */
 
 .section-header {
   font-weight: normal;
@@ -396,7 +473,7 @@ a {
 }
 
 .cart-column {
-  display: flex;
+  /* display: flex; */
   align-items: center;
   border-bottom: 1px solid white;
   margin-right: 1.5em;
@@ -468,7 +545,7 @@ a {
 }
 
 .cart-total {
-  text-align: end;
+  /* text-align: end; */
   margin-top: 10px;
   margin-right: 10px;
 }
@@ -486,7 +563,7 @@ a {
 }
 
 .btn-purchase {
-  display: block;
+  display: flex;
   margin: 40px auto 80px auto;
   font-size: 1.75em;
 }

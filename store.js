@@ -101,7 +101,29 @@ function updateCartTotal() {
     document.getElementsByClassName('cart-total-price')[0].innerText = '£' + total
 }
 
+// Arrow
 
+const arrows = document.querySelectorAll(".arrow");
+const movieLists = document.querySelectorAll(".dvdList");
+
+arrows.forEach((arrow, i) => {
+  const itemNumber = movieLists[i].querySelectorAll("img").length;
+  let clickCounter = 0;
+  arrow.addEventListener("click", () => {
+    const ratio = Math.floor(window.innerWidth / 270);
+    clickCounter++;
+    if (itemNumber - (4 + clickCounter) + (4 - ratio) >= 0) {
+      movieLists[i].style.transform = `translateX(${
+        movieLists[i].computedStyleMap().get("transform")[0].x.value - 300
+      }px)`;
+    } else {
+      movieLists[i].style.transform = "translateX(0)";
+      clickCounter = 0;
+    }
+  });
+
+  console.log(Math.floor(window.innerWidth / 270));
+});
 
 // ROB's ADDITIONS FOR STOCK //
 
@@ -192,5 +214,163 @@ function reduceStockOutback() {
         } 
     }
 
+    function reduceStockShaw() {
+        let stockNumberoutback = document.querySelector('.stock-shaw');
+        if (stockNumberoutback.innerHTML > 0){
+            stockNumberoutback.innerHTML--;
+            } 
+        }
 
+    function reduceStockNote() {
+        let stockNumberoutback = document.querySelector('.stock-note');
+        if (stockNumberoutback.innerHTML > 0){
+                stockNumberoutback.innerHTML--;
+           } 
+      }
+
+      function reduceStockBorn() {
+        let stockNumberoutback = document.querySelector('.stock-Born');
+        if (stockNumberoutback.innerHTML > 0){
+                stockNumberoutback.innerHTML--;
+           } 
+      }
+
+      function reduceStockJoe() {
+        let stockNumberoutback = document.querySelector('.stock-Joe');
+        if (stockNumberoutback.innerHTML > 0){
+                stockNumberoutback.innerHTML--;
+           } 
+      }
+
+      function reduceStocklittle() {
+        let stockNumberoutback = document.querySelector('.stock-little');
+        if (stockNumberoutback.innerHTML > 0){
+                stockNumberoutback.innerHTML--;
+           } 
+      }
+
+      function reduceStocktitanic() {
+        let stockNumberoutback = document.querySelector('.stock-titanic');
+        if (stockNumberoutback.innerHTML > 0){
+                stockNumberoutback.innerHTML--;
+           } 
+      }
+
+      function reduceStockjuma() {
+        let stockNumberoutback = document.querySelector('.stock-juma');
+        if (stockNumberoutback.innerHTML > 0){
+                stockNumberoutback.innerHTML--;
+           } 
+      }
+
+      function reduceStockblack() {
+        let stockNumberoutback = document.querySelector('.stock-black');
+        if (stockNumberoutback.innerHTML > 0){
+                stockNumberoutback.innerHTML--;
+           } 
+      }
+
+      function reduceStockfast() {
+        let stockNumberoutback = document.querySelector('.stock-fast');
+        if (stockNumberoutback.innerHTML > 0){
+                stockNumberoutback.innerHTML--;
+           } 
+      }
     
+      function reduceStocktall() {
+        let stockNumberoutback = document.querySelector('.stock-tall');
+        if (stockNumberoutback.innerHTML > 0){
+                stockNumberoutback.innerHTML--;
+           } 
+      }
+
+      function reduceStockram() {
+        let stockNumberoutback = document.querySelector('.stock-ram');
+        if (stockNumberoutback.innerHTML > 0){
+                stockNumberoutback.innerHTML--;
+           } 
+      }
+
+      function reduceStockking() {
+        let stockNumberoutback = document.querySelector('.stock-king');
+        if (stockNumberoutback.innerHTML > 0){
+                stockNumberoutback.innerHTML--;
+           } 
+      }
+
+      function reduceStockJoke1() {
+        let stockNumberoutback = document.querySelector('.stock-joke1');
+        if (stockNumberoutback.innerHTML > 0){
+                stockNumberoutback.innerHTML--;
+           } 
+      }
+
+      function reduceStockSkyfall1() {
+        let stockNumberoutback = document.querySelector('.stock-skyfall1');
+        if (stockNumberoutback.innerHTML > 0){
+                stockNumberoutback.innerHTML--;
+           } 
+      }
+
+      function reduceStockBond1() {
+        let stockNumberoutback = document.querySelector('.stock-bond1');
+        if (stockNumberoutback.innerHTML > 0){
+                stockNumberoutback.innerHTML--;
+           } 
+      }
+
+      function reduceStockBatman1() {
+        let stockNumberoutback = document.querySelector('.stock-batman1');
+        if (stockNumberoutback.innerHTML > 0){
+                stockNumberoutback.innerHTML--;
+           } 
+      }
+
+      function reduceStockInter1() {
+        let stockNumberoutback = document.querySelector('.stock-inter1');
+        if (stockNumberoutback.innerHTML > 0){
+                stockNumberoutback.innerHTML--;
+           } 
+      }
+
+      function reduceStockSupe1() {
+        let stockNumberoutback = document.querySelector('.stock-supe1');
+        if (stockNumberoutback.innerHTML > 0){
+                stockNumberoutback.innerHTML--;
+           } 
+      }
+
+      function reduceStockBeaut1() {
+        let stockNumberoutback = document.querySelector('.stock-beaut1');
+        if (stockNumberoutback.innerHTML > 0){
+                stockNumberoutback.innerHTML--;
+           } 
+      }
+
+      function reduceStockHero1() {
+        let stockNumberoutback = document.querySelector('.stock-hero1');
+        if (stockNumberoutback.innerHTML > 0){
+                stockNumberoutback.innerHTML--;
+           } 
+      }
+
+      function reduceStockOutback1() {
+        let stockNumberoutback = document.querySelector('.stock-outback1');
+        if (stockNumberoutback.innerHTML > 0){
+                stockNumberoutback.innerHTML--;
+           } 
+      }
+
+      function reduceStockHocus1() {
+        let stockNumberoutback = document.querySelector('.stock-hocus1');
+        if (stockNumberoutback.innerHTML > 0){
+                stockNumberoutback.innerHTML--;
+           } 
+      }
+
+      function reduceStockGoon1() {
+        let stockNumberoutback = document.querySelector('.stock-goon1');
+        if (stockNumberoutback.innerHTML > 0){
+                stockNumberoutback.innerHTML--;
+           } 
+      }

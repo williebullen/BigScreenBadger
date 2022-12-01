@@ -20,11 +20,12 @@
   </head>
   <body>
     <!-- TOP MENU  -->
+    <a id="top"></a>
     <div class="topNav">
-      <div class="container">
+      <div class="navContainer">
         <div class="logo">
           <img
-            src="imgs/badgers-big-screen-low-resolution-logo-color-on-transparent-background.png"
+            src="imgs/badgers-big-screen-low-resolution-logo-color-on-transparent-background (1).png"
             alt=""
             class="logoImg"
           />
@@ -78,9 +79,37 @@
           </form>
         </div>
       </div>
-      <i class="left-menu-icon fas fa-home"></i>
-      <a href="#basket"><i class="left-menu-icon fas fa-shopping-cart"></i></a>
+      <a href="#top"><i class="left-menu-icon fas fa-home"></i></a>
+      <i id="showBasketModal" class="left-menu-icon fas fa-shopping-cart"></i>
     </div>
+
+<!-- shopping basket model -->
+
+<div class="basketModal --basketHidden">
+  <div class="basketContents">
+    <div class="basketCloseBar">
+      <span>X</span>
+    </div>
+    <section class="container content-section">
+      <h2 class="section-header">Basket</h2>
+      <div class="cart-row">
+          <span class="cart-item cart-header cart-column">ITEM</span>
+          <span class="cart-price cart-header cart-column">PRICE</span>
+          <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+      </div>
+      <div class="cart-items">
+          
+          </div>
+      </div>
+      <div class="cart-total">
+          <strong class="cart-total-title">Total</strong>
+          <span class="cart-total-price">£0</span>
+      </div>
+      <button id="purchase" class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+  </section>
+  </div>
+</div>
+
 
     <!-- HERO CONTENT  -->
 
@@ -91,7 +120,7 @@
           background: linear-gradient(
               to bottom,
               rgba(0, 0, 0, 0),
-              rgb(20, 20, 20)
+              rgb(10, 10, 10)
             ),
             url('imgs/AdobeStock_416452257_Editorial_Use_Only.jpeg');
         "
@@ -100,6 +129,12 @@
           Browse the largest collection of secondhand DVD's the world has to
           offer! Shipped world wide.... You can trust Badgers Big Screen!!
         <h2>
+          <div class="genSection">
+          <button class="genBTN"> <a href="#familyFilms">Family Films</a></button>
+          <button class="genBTN"> <a href="#rockFilms">The Rock</a></button>
+          <button class="genBTN"> <a href="#dramaFilms">Drrama Films</a></button>
+          <button class="genBTN"> <a href="#actionFilms">Action Films</a></button>
+        </div>
       </div>
     </div>
 
@@ -116,9 +151,9 @@
           />
           <span class="dvdListItemTitle">Harry Potter</span>
           <p class="dvdListItemVerb">The final part of the Wizard Series.</p>
-          <span class="dvdPrice">Price:£9.99</span>
+          <span class="dvdPrice">Price: £9.99</span>
           <span class="dvdStock">Stock: <span class="stock-harry">20</span></span>
-          <span class="dvdGenre">Genre:()</span>
+          <span class="dvdGenre">Genre: Family</span>
           <button onclick="reduceStockHarry()" class="dvdBuy">Add to Basket</button>
           
         </div>
@@ -128,18 +163,18 @@
           <p class="dvdListItemVerb">
             Epic award winning space and travel story.
           </p>
-          <span class="dvdPrice">Price:£13.99</span>
+          <span class="dvdPrice">Price: £13.99</span>
           <span class="dvdStock">Stock: <span class="stock-inter">20</span></span>
-          <span class="dvdGenre">Genre:()</span>
+          <span class="dvdGenre">Genre: Action</span>
           <button onclick="reduceStockInter()" class="dvdBuy">Add to Basket</button>
         </div>
         <div class="dvdListItem">
           <img class="dvdListItemImg" src="imgs/skyfall-main_1.webp" alt="" />
           <span class="dvdListItemTitle">Skyfall</span>
           <p class="dvdListItemVerb">Epic James Bond film.</p>
-          <span class="dvdPrice">Price:£8.99</span>
+          <span class="dvdPrice">Price: £8.99</span>
           <span class="dvdStock">Stock: <span class="stock-skyfall">20</span></span>
-          <span class="dvdGenre">Genre:()</span>
+          <span class="dvdGenre">Genre: Action</span>
           <button onclick="reduceStockSkyfall()" class="dvdBuy">Add to Basket</button>
         </div>
         <div class="dvdListItem">
@@ -150,30 +185,31 @@
           />
           <span class="dvdListItemTitle">Hocus Pocus</span>
           <p class="dvdListItemVerb">Class Disney Witch advanture</p>
-          <span class="dvdPrice">Price:£19.99</span>
+          <span class="dvdPrice">Price: £19.99</span>
           <span class="dvdStock">Stock: <span class="stock-hocus">20</span></span>
-          <span class="dvdGenre">Genre:()</span>
+          <span class="dvdGenre">Genre: Family</span>
           <button onclick="reduceStockHocus()" class="dvdBuy">Add to Basket</button>
         </div>
         <div class="dvdListItem">
           <img class="dvdListItemImg" src="imgs/goonoes.jpg" alt="" />
           <span class="dvdListItemTitle">Goonies</span>
           <p class="dvdListItemVerb">Classive Kids Adventure film</p>
-          <span class="dvdPrice">Price:£12.99</span>
+          <span class="dvdPrice">Price: £12.99</span>
           <span class="dvdStock">Stock: <span class="stock-goon">20</span></span>
-          <span class="dvdGenre">Genre:()</span>
+          <span class="dvdGenre">Genre: Family</span>
           <button onclick="reduceStockGoon()" class="dvdBuy">Add to Basket</button>
         </div>
         <div class="dvdListItem">
           <img class="dvdListItemImg" src="imgs/SupermanI.webp" alt="" />
           <span class="dvdListItemTitle">Superman</span>
           <p class="dvdListItemVerb">The Original & Best</p>
-          <span class="dvdPrice">Price:£14.99</span>
+          <span class="dvdPrice">Price: £14.99</span>
           <span class="dvdStock">Stock: <span class="stock-supe">20</span></span>
-          <span class="dvdGenre">Genre:()</span>
+          <span class="dvdGenre">Genre: Action</span>
           <button onclick="reduceStockSupe()" class="dvdBuy">Add to Basket</button>
         </div>
       </div>
+      <i class="fas fa-chevron-right arrow"></i>
     </div>
     <div class="movieConetnt">
       <h1>Recommended For You</h1>
@@ -186,9 +222,9 @@
           />
           <span class="dvdListItemTitle">Beauty and The Beast</span>
           <p class="dvdListItemVerb">A tale as old as time...</p>
-          <span class="dvdPrice">Price:£24.99</span>
+          <span class="dvdPrice">Price: £24.99</span>
           <span class="dvdStock">Stock: <span class="stock-beaut">20</span></span>
-          <span class="dvdGenre">Genre:()</span>
+          <span class="dvdGenre">Genre: Family</span>
           <button onclick="reduceStockBeaut()" class="dvdBuy">Add to Basket</button>
         </div>
         <div class="dvdListItem">
@@ -199,9 +235,9 @@
           />
           <span class="dvdListItemTitle">No Time to Die</span>
           <p class="dvdListItemVerb">Another epic James Bond Adventure.</p>
-          <span class="dvdPrice">Price:£11.99</span>
+          <span class="dvdPrice">Price: £11.99</span>
           <span class="dvdStock">Stock: <span class="stock-bond">20</span></span>
-          <span class="dvdGenre">Genre:()</span>
+          <span class="dvdGenre">Genre: Family</span>
           <button onclick="reduceStockBond()" class="dvdBuy">Add to Basket</button>
         </div>
         <div class="dvdListItem">
@@ -214,7 +250,7 @@
           <p class="dvdListItemVerb">Fun kids superhero film.</p>
           <span class="dvdPrice">Price:£15.99</span>
           <span class="dvdStock">Stock: <span class="stock-hero">20</span></span>
-          <span class="dvdGenre">Genre:()</span>
+          <span class="dvdGenre">Genre: Family</span>
           <button onclick="reduceStockHero()" class="dvdBuy">Add to Basket</button>
         </div>
         <div class="dvdListItem">
@@ -225,42 +261,344 @@
           />
           <span class="dvdListItemTitle">Batman</span>
           <p class="dvdListItemVerb">Batman... That is all</p>
-          <span class="dvdPrice">Price:£16.99</span>
+          <span class="dvdPrice">Price: £16.99</span>
           <span class="dvdStock">Stock: <span class="stock-batman">20</span></span>
-          <span class="dvdGenre">Genre:()</span>
+          <span class="dvdGenre">Genre: Family</span>
           <button onclick="reduceStockBatman()" class="dvdBuy">Add to Basket</button>
         </div>
         <div class="dvdListItem">
           <img class="dvdListItemImg" src="imgs/joker.jpg" alt="" />
           <span class="dvdListItemTitle">The Joker</span>
           <p class="dvdListItemVerb">Dark origins of the clown prince</p>
-          <span class="dvdPrice">Price:£14.99</span>
+          <span class="dvdPrice">Price: £14.99</span>
           <span class="dvdStock">Stock: <span class="stock-joke">20</span></span>
-          <span class="dvdGenre">Genre:()</span>
+          <span class="dvdGenre">Genre: Family</span>
           <button onclick="reduceStockJoke()" class="dvdBuy">Add to Basket</button>
         </div>
         <div class="dvdListItem">
           <img class="dvdListItemImg" src="imgs/3679.webp" alt="" />
           <span class="dvdListItemTitle">Back to the Outback</span>
           <p class="dvdListItemVerb">Fun family animal adventure</p>
-          <span class="dvdPrice">Price:£19.99</span>
+          <span class="dvdPrice">Price: £19.99</span>
           <span class="dvdStock">Stock: <span class="stock-outback">20</span></span>
-          <span class="dvdGenre">Genre:()</span>
+          <span class="dvdGenre">Genre: Family</span>
           <button onclick="reduceStockOutback()" class="dvdBuy">Add to Basket</button>
         
         </div>
+        
       </div>
     </div>
 
-    <div class="heroContent"
-                style="background: linear-gradient(to bottom, rgba(0,0,0,0), #151515), url('imgs/Starwars.jpg');">
-                <img class="featured-title" src="img/f-t-2.png" alt="">
-                <p class="featured-desc">Dark is a German science fiction thriller streaming television series co-created by Baran bo Odar and Jantje Friese. It ran for three seasons from 2017 to 2020. In the aftermath of a child's disappearance, Dark follows characters from the fictional German town of Winden as they pursue the truth.</p>
-                <button class="featured-button">WATCH</button>
-            </div>
+    <div class="heroContainer">
+      <div
+        class="heroContent"
+        style="
+          background: linear-gradient(
+              to bottom,
+              rgba(0, 0, 0, 0),
+              rgb(10, 10, 10)
+            ),
+            url('imgs/STARTWARSBANNER.jpg');
+        "
+      >
+        <h2 class="heroWording">
+          COMING SOON - STAR WARS
+        <h2>
+          <a href="https://www.youtube.com/watch?v=eBGIQ7ZuuiU"></a><button class="trailer"> <a href="https://www.youtube.com/watch?v=eBGIQ7ZuuiU">Watch Trailer</a></button>
+      </div>
+    </div>
+    <div class="movieConetnt">
+      <a id="familyFilms"></a>
+      <h1>Family Films</h1>
+      <div class="dvdList">
+        <div class="dvdListItem">
+          <img
+            class="dvdListItemImg"
+            src="imgs/MV5BMTUwNjUxMTM4NV5BMl5BanBnXkFtZTgwODExMDQzMTI@._V1_.jpg"
+            alt=""
+          />
+          <span class="dvdListItemTitle">Beauty and The Beast</span>
+          <p class="dvdListItemVerb">A tale as old as time...</p>
+          <span class="dvdPrice">Price: £24.99</span>
+          <span class="dvdStock">Stock: <span class="stock-beaut1">20</span></span>
+          <span class="dvdGenre">Genre: Family</span>
+          <button onclick="reduceStockBeaut1()" class="dvdBuy">Add to Basket</button>
+        </div>
+        <div class="dvdListItem">
+          <img
+            class="dvdListItemImg"
+            src="imgs/MV5BY2Y1OGRhM2ItMzlmMy00OGYzLTg1ODgtYWE5MGQzN2RjZGEyXkEyXkFqcGdeQXVyODc0OTEyNDU@._V1_.jpg"
+            alt=""
+          />
+          <span class="dvdListItemTitle">We can be heros</span>
+          <p class="dvdListItemVerb">Fun kids superhero film.</p>
+          <span class="dvdPrice">Price: £15.99</span>
+          <span class="dvdStock">Stock: <span class="stock-hero1">20</span></span>
+          <span class="dvdGenre">Genre: Family</span>
+          <button onclick="reduceStockHero1()" class="dvdBuy">Add to Basket</button>
+        </div>
+        <div class="dvdListItem">
+          <img class="dvdListItemImg" src="imgs/3679.webp" alt="" />
+          <span class="dvdListItemTitle">Back to the Outback</span>
+          <p class="dvdListItemVerb">Fun family animal adventure</p>
+          <span class="dvdPrice">Price: £19.99</span>
+          <span class="dvdStock">Stock: <span class="stock-outback1">20</span></span>
+          <span class="dvdGenre">Genre: Family</span>
+          <button onclick="reduceStockOutback1()" class="dvdBuy">Add to Basket</button>
+        
+        </div>
+        <div class="dvdListItem">
+          <img
+            class="dvdListItemImg"
+            src="imgs/p_hocuspocus_19880_e000b013.webp"
+            alt=""
+          />
+          <span class="dvdListItemTitle">Hocus Pocus</span>
+          <p class="dvdListItemVerb">Class Disney Witch advanture</p>
+          <span class="dvdPrice">Price: £19.99</span>
+          <span class="dvdStock">Stock: <span class="stock-hocus1">20</span></span>
+          <span class="dvdGenre">Genre: Family</span>
+          <button onclick="reduceStockHocus1()" class="dvdBuy">Add to Basket</button>
+        </div>
+        <div class="dvdListItem">
+          <img class="dvdListItemImg" src="imgs/goonoes.jpg" alt="" />
+          <span class="dvdListItemTitle">Goonies</span>
+          <p class="dvdListItemVerb">Classive Kids Adventure film</p>
+          <span class="dvdPrice">Price: £12.99</span>
+          <span class="dvdStock">Stock: <span class="stock-goon1">20</span></span>
+          <span class="dvdGenre">Genre: Family</span>
+          <button onclick="reduceStockGoon1()" class="dvdBuy">Add to Basket</button>
+        </div>
+      </div>
+    </div>
+    <div class="movieConetnt">
+      <h1>Drama Films</h1>
+      <a id="dramaFilms"></a>
+      <div class="dvdList">
+        <div class="dvdListItem">
+          <img
+            class="dvdListItemImg"
+            src="imgs/shawshank.jpg"
+            alt=""
+          />
+          <span class="dvdListItemTitle">Shawshank Redemption</span>
+          <p class="dvdListItemVerb">A class tale about friends</p>
+          <span class="dvdPrice">Price: £4.99</span>
+          <span class="dvdStock">Stock: <span class="stock-shaw">20</span></span>
+          <span class="dvdGenre">Genre: Drama</span>
+          <button onclick="reduceStockShaw()" class="dvdBuy">Add to Basket</button>
+        </div>
+        <div class="dvdListItem">
+          <img
+            class="dvdListItemImg"
+            src="imgs/starborn.jpg"
+            alt=""
+          />
+          <span class="dvdListItemTitle">A Star is Born</span>
+          <p class="dvdListItemVerb">Remake of a classic</p>
+          <span class="dvdPrice">Price: £7.99</span>
+          <span class="dvdStock">Stock: <span class="stock-Born">20</span></span>
+          <span class="dvdGenre">Genre: Drama</span>
+          <button onclick="reduceStockBorn()" class="dvdBuy">Add to Basket</button>
+        </div>
+        <div class="dvdListItem">
+          <img class="dvdListItemImg" src="imgs/meetjoe.jpg" alt="" />
+          <span class="dvdListItemTitle">Meet Joe Black</span>
+          <p class="dvdListItemVerb">Love story with Brad Pitt</p>
+          <span class="dvdPrice">Price: £9.99</span>
+          <span class="dvdStock">Stock: <span class="stock-Joe">20</span></span>
+          <span class="dvdGenre">Genre: Drama</span>
+          <button onclick="reduceStockJoe()" class="dvdBuy">Add to Basket</button>
+        
+        </div>
+        <div class="dvdListItem">
+          <img
+            class="dvdListItemImg"
+            src="imgs/notebook.jpg"
+            alt=""
+          />
+          <span class="dvdListItemTitle">The Notebook</span>
+          <p class="dvdListItemVerb">Tears will fall love story</p>
+          <span class="dvdPrice">Price: £6.99</span>
+          <span class="dvdStock">Stock: <span class="stock-note">20</span></span>
+          <span class="dvdGenre">Genre: Drama</span>
+          <button onclick="reduceStockNote()" class="dvdBuy">Add to Basket</button>
+        </div>
+        <div class="dvdListItem">
+          <img class="dvdListItemImg" src="imgs/littlewo.jpg" alt="" />
+          <span class="dvdListItemTitle">Little Women</span>
+          <p class="dvdListItemVerb">From the book to film</p>
+          <span class="dvdPrice">Price: £12.99</span>
+          <span class="dvdStock">Stock: <span class="stock-little">20</span></span>
+          <span class="dvdGenre">Genre: Drama</span>
+          <button onclick="reduceStocklittle()" class="dvdBuy">Add to Basket</button>
+        </div>
+        <div class="dvdListItem">
+          <img class="dvdListItemImg" src="imgs/titanic.jpg" alt="" />
+          <span class="dvdListItemTitle">Titanic</span>
+          <p class="dvdListItemVerb">Blockbuster film</p>
+          <span class="dvdPrice">Price: £12.99</span>
+          <span class="dvdStock">Stock: <span class="stock-titanic">20</span></span>
+          <span class="dvdGenre">Genre: Drama</span>
+          <button onclick="reduceStocktitanic()" class="dvdBuy">Add to Basket</button>
+        </div>
+      </div>
+    </div>
+    <a id="rockFilms"></a>
+    <div class="movieConetnt">
+      <h1>The Rock</h1>
+      <div class="dvdList">
+        <div class="dvdListItem">
+          <img
+            class="dvdListItemImg"
+            src="imgs/jumanji.webp"
+            alt=""
+          />
+          <span class="dvdListItemTitle">Jumanji</span>
+          <p class="dvdListItemVerb">Welcome to the game</p>
+          <span class="dvdPrice">Price: £14.99</span>
+          <span class="dvdStock">Stock: <span class="stock-juma">20</span></span>
+          <span class="dvdGenre">Genre: Rock</span>
+          <button onclick="reduceStockjuma()" class="dvdBuy">Add to Basket</button>
+        </div>
+        <div class="dvdListItem">
+          <img
+            class="dvdListItemImg"
+            src="imgs/blackadam.jpg"
+            alt=""
+          />
+          <span class="dvdListItemTitle">Black Adam</span>
+          <p class="dvdListItemVerb">Black Adam on the Big Screen</p>
+          <span class="dvdPrice">Price: £14.99</span>
+          <span class="dvdStock">Stock: <span class="stock-black">20</span></span>
+          <span class="dvdGenre">Genre: Rock</span>
+          <button onclick="reduceStockblack()" class="dvdBuy">Add to Basket</button>
+        </div>
+        <div class="dvdListItem">
+          <img class="dvdListItemImg" src="imgs/fastrock.jpg" alt="" />
+          <span class="dvdListItemTitle">Fast 7 & 8</span>
+          <p class="dvdListItemVerb">Yet another one, with The Rock this time</p>
+          <span class="dvdPrice">Price: £17.99</span>
+          <span class="dvdStock">Stock: <span class="stock-fast">20</span></span>
+          <span class="dvdGenre">Genre: Rock</span>
+          <button onclick="reduceStockfast()" class="dvdBuy">Add to Basket</button>
+        
+        </div>
+        <div class="dvdListItem">
+          <img
+            class="dvdListItemImg"
+            src="imgs/walkingtall.jpg"
+            alt=""
+          />
+          <span class="dvdListItemTitle">Walking Tall</span>
+          <p class="dvdListItemVerb">Not bad...</p>
+          <span class="dvdPrice">Price: £2.99</span>
+          <span class="dvdStock">Stock: <span class="stock-tall">20</span></span>
+          <span class="dvdGenre">Genre: Rock</span>
+          <button onclick="reduceStocktall()" class="dvdBuy">Add to Basket</button>
+        </div>
+        <div class="dvdListItem">
+          <img class="dvdListItemImg" src="imgs/rampage.jpg" alt="" />
+          <span class="dvdListItemTitle">Rampage</span>
+          <p class="dvdListItemVerb">Big meets BIGGER</p>
+          <span class="dvdPrice">Price: £12.99</span>
+          <span class="dvdStock">Stock: <span class="stock-ram">20</span></span>
+          <span class="dvdGenre">Genre: Rock</span>
+          <button onclick="reduceStockram()" class="dvdBuy">Add to Basket</button>
+        </div>
+        <div class="dvdListItem">
+          <img class="dvdListItemImg" src="imgs/thescorpionking.jpg" alt="" />
+          <span class="dvdListItemTitle">The Scorpion King</span>
+          <p class="dvdListItemVerb">His first film as the main star!</p>
+          <span class="dvdPrice">Price: £1.99</span>
+          <span class="dvdStock">Stock: <span class="stock-king">20</span></span>
+          <span class="dvdGenre">Genre: Rock</span>
+          <button onclick="reduceStockking()" class="dvdBuy">Add to Basket</button>
+        </div>
+      </div>
+    </div>
+    <div class="movieConetnt">
+      <h1>Action Films</h1>
+      <a id="actionFilms"></a>
+      <div class="dvdList">
+        <div class="dvdListItem">
+          <img class="dvdListItemImg" src="imgs/joker.jpg" alt="" />
+          <span class="dvdListItemTitle">The Joker</span>
+          <p class="dvdListItemVerb">Dark origins of the clown prince</p>
+          <span class="dvdPrice">Price: £14.99</span>
+          <span class="dvdStock">Stock: <span class="stock-joke1">20</span></span>
+          <span class="dvdGenre">Genre: Action</span>
+          <button onclick="reduceStockJoke1()" class="dvdBuy">Add to Basket</button>
+        </div>
+        <div class="dvdListItem">
+          <img class="dvdListItemImg" src="imgs/skyfall-main_1.webp" alt="" />
+          <span class="dvdListItemTitle">Skyfall</span>
+          <p class="dvdListItemVerb">Epic James Bond film.</p>
+          <span class="dvdPrice">Price: £8.99</span>
+          <span class="dvdStock">Stock: <span class="stock-skyfall1">20</span></span>
+          <span class="dvdGenre">Genre: Action</span>
+          <button onclick="reduceStockSkyfall1()" class="dvdBuy">Add to Basket</button>
+        </div>
+        <div class="dvdListItem">
+          <img
+            class="dvdListItemImg"
+            src="imgs/No_Time_to_Die_poster.jpg"
+            alt=""
+          />
+          <span class="dvdListItemTitle">No Time to Die</span>
+          <p class="dvdListItemVerb">Another epic James Bond Adventure.</p>
+          <span class="dvdPrice">Price: £11.99</span>
+          <span class="dvdStock">Stock: <span class="stock-bond1">20</span></span>
+          <span class="dvdGenre">Genre: Action</span>
+          <button onclick="reduceStockBond1()" class="dvdBuy">Add to Basket</button>
+        </div>
+        <div class="dvdListItem">
+          <img
+            class="dvdListItemImg"
+            src="imgs/MV5BZDNjOGNhN2UtNmNhMC00YjU4LWEzMmUtNzRkM2RjN2RiMjc5XkEyXkFqcGdeQXVyMTU0OTM5ODc1._V1_FMjpg_UX1000_.jpg"
+            alt=""
+          />
+          <span class="dvdListItemTitle">Batman</span>
+          <p class="dvdListItemVerb">Batman... That is all</p>
+          <span class="dvdPrice">Price: £16.99</span>
+          <span class="dvdStock">Stock: <span class="stock-batman1">20</span></span>
+          <span class="dvdGenre">Genre: Action</span>
+          <button onclick="reduceStockBatman1()" class="dvdBuy">Add to Basket</button>
+        </div>
+        <div class="dvdListItem">
+          <img class="dvdListItemImg" src="imgs/maxresdefault.jpg" alt="" />
+          <span class="dvdListItemTitle">Interstellar</span>
+          <p class="dvdListItemVerb">
+            Epic award winning space and travel story.
+          </p>
+          <span class="dvdPrice">Price: £13.99</span>
+          <span class="dvdStock">Stock: <span class="stock-inter1">20</span></span>
+          <span class="dvdGenre">Genre: Action</span>
+          <button onclick="reduceStockInter1()" class="dvdBuy">Add to Basket</button>
+        </div>
+        <div class="dvdListItem">
+          <img class="dvdListItemImg" src="imgs/SupermanI.webp" alt="" />
+          <span class="dvdListItemTitle">Superman</span>
+          <p class="dvdListItemVerb">The Original & Best</p>
+          <span class="dvdPrice">Price: £14.99</span>
+          <span class="dvdStock">Stock: <span class="stock-supe1">20</span></span>
+          <span class="dvdGenre">Genre: Action</span>
+          <button onclick="reduceStockSupe1()" class="dvdBuy">Add to Basket</button>
+        </div>
+      </div>
+
+      
+      
+
+
+
+
+
+
+
 
             <!-- Shopping Basket Section -->
-            <a id="basket"></a>
+            <!-- <a id="basket"></a>
             <section class="container content-section">
               <h2 class="section-header">Basket</h2>
               <div class="cart-row">
@@ -276,8 +614,8 @@
                   <strong class="cart-total-title">Total</strong>
                   <span class="cart-total-price">£0</span>
               </div>
-              <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
-          </section>
+              <button id="purchase" class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+          </section> -->
     <script>
       // Get the modal
       var modal = document.getElementById("myModal");
@@ -312,6 +650,22 @@
       function closeSearch() {
         document.getElementById("myOverlay").style.display = "none";
       }
+
+      // BasketModal
+      const toggleBasket = () => {
+        document.querySelector('.basketModal')
+        .classList.toggle('--basketHidden');
+      };
+
+      document.querySelector('#showBasketModal')
+      .addEventListener('click', toggleBasket);
+
+      // document.querySelector('#purchase')
+      // .addEventListener('click', toggleBasket);
+
+      document.querySelector('.basketCloseBar span')
+      .addEventListener('click', toggleBasket);
+
 
 
     </script>
